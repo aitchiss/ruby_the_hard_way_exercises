@@ -1,0 +1,79 @@
+Outline of game for Ex45 project
+
+You’re out with a friend, and see an abandoned old house. Your friend goes in, and after a while you reluctantly follow to go find her. It becomes clear this house is haunted! You must explore the rooms and try not to get killed by the things you find in them. The aim of the game is to find your friend and get out of the house. To do this, you will have to choose between different rooms and decide how to act in the scenarios presented in each. Choose the wrong option and you will die, and become one of the spirits to forever haunt the house!
+
+
+The rooms:
+
+One main corridor, off of which are:
+	- a dining room
+		- a kitchen
+	- a study
+	- a cellar door down to the basement
+	(optional extras?)- a set of stairs going up to the next floor
+				- off of which is a small landing
+				- off of the landing, a bedroom
+				- and a bathroom
+
+The program needs to randomly allocate the ‘friend’ to a room at the start of the game. The game needs to end when you enter the room with your friend in, and correctly solve the crisis in that room.
+
+Scenarios:
+
+You win! - You find your friend, smash a window and escape outside
+You lose! - You die and forever have to haunt the house
+
+You enter each room and are posed with a multiple choice question as to how to behave:
+
+You start in the corridor: You are asked to choose which door you want to follow (left and right doors, and 				one that’s clearly a cellar door)
+
+Right door = dining room: on the dining table is a squishy monster with 5 legs - it’s growling at you. Do you 				tickle the monster or punch it? (correct answer: tickle!). If successful you 				must choose whether to go into the kitchen or back to the corridor.
+
+Left door = the study: books from the bookshelves start throwing themselves at you. Do you start reading one 			of them, or hit the floor and try to crawl out? (correct answer: hit the floor!). If 			you are successful, you crawl out and back into the corridor.
+
+Kitchen: you see your friend isn’t in the kitchen. You try to leave but a ghost is blocking your way and looks 		angry! Do you taunt the ghost, or try to run straight through it? (correct answer: taunt it - 		it starts crying and runs away). If successful, you run back into the corridor.
+
+Cellar: It’s dark, and suddenly you become aware of several bodies moving closer to you from all sides.. they 	look like vampires. Do you scream at the top of your lungs, or burst into song? (correct answer: burst 	into song - they all join in and they’re distracted by having an impromptu dance-off). If successful, 	you escape past them and back up the stairs.
+
+
+
+What kind of things do I have??
+
+Scenarios:
+- win
+- die
+- dining room
+- kitchen
+- study
+- cellar
+- corridor
+
+Friend
+
+
+I must use more than one file
+Each room must be a class
+There must be another class that knows about all the rooms and can run them
+
+
+Classes:
+
+Adventure: Overarching class that runs everything
+
+Room: General class that has the room subclasses 
+	DiningRoom
+	Kitchen
+	Study
+	Cellar
+	Corridor
+
+Objects of Adventure class
+	win
+	die
+	friend?
+
+
+Each of the room classes must have methods which return which room is next based on user input
+
+When the Adventure class initializes I need it to assign a random numerical value to ‘friend’. The numerical value needs to dictate what room the friend is in.
+
+When each room initializes, I need it to check if the friend value matches its room. If it does, it needs to run slightly differently, so a win scenario is possible.
